@@ -26,3 +26,17 @@ function actualizarLista() {
     listaAmigos.appendChild(li);
   });
 }
+
+function sortearAmigo() {
+  if (amigos.length > 1) {
+    let ganador = document.getElementById("resultado");
+    ganador.innerHTML = "";
+
+    let numeroGanador = Math.floor(Math.random() * amigos.length);
+    const li = document.createElement("li");
+    li.textContent = amigos[numeroGanador];
+    ganador.appendChild(li);
+  } else {
+    alert("Porfavor, Ingresa al menos 2 amigos para llevar acabo el sorteo");
+  }
+}
